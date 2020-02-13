@@ -4,8 +4,7 @@ package rocks.zipcodewilmington.tictactoe;
  * @author leon on 6/22/18.
  */
 public class Board {
-
-    private static Character[][] = board;
+    private static Character[][] board;
     public Board(Character[][] inputBoard) {
         this.board = inputBoard;
     }
@@ -54,16 +53,10 @@ public class Board {
         boolean outcome = false;
         int boardSize = 3;
         for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                //innerLoop checks all positions
-                if(board[i][i] != playerPiece){
-                    outcome = false;
-                    break;
-                } else { outcome = true;
-                    break;
-                }
-            }
-            if (outcome){
+            if(board[i][i] != playerPiece){
+                outcome = false;
+                break;
+            } else { outcome = true;
                 break;
             }
         }
@@ -73,17 +66,11 @@ public class Board {
     public boolean topRightBotLeftCheck(Character playerPiece){
         boolean outcome = false;
         int boardSize = 3;
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                //innerLoop checks all positions
-                if(board[i][i] != playerPiece){
-                    outcome = false;
-                    break;
-                } else { outcome = true;
-                    break;
-                }
-            }
-            if (outcome){
+        for (int i = boardSize-1; i > 0; i--) {
+            if(board[i][i] != playerPiece){
+                outcome = false;
+                break;
+            } else { outcome = true;
                 break;
             }
         }
@@ -103,6 +90,10 @@ public class Board {
     }
 
     public String getWinner() {
+        String daWinner = "";
+        if(colsCheck('X') || rowsCheck('X') || topLeftBotRightCheck('X') ||topRightBotLeftCheck('X')){
+
+        }
         return null;
     }
 
