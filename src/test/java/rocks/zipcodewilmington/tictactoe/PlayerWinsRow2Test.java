@@ -23,8 +23,8 @@ public class PlayerWinsRow2Test {
 
     @Test
     public void myTestforRowsCheck() {
-        boolean expectedWinner = true;
-        boolean oWinnerActual = board.rowsCheck('X');
+        boolean expectedWinner = false;
+        boolean oWinnerActual = board.rowsCheck('O');
 
         // Then
         Assert.assertEquals(expectedWinner, oWinnerActual);

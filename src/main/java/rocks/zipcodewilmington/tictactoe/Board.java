@@ -20,8 +20,10 @@ public class Board {
             for (int j = 0; j <= 2; j++) {
                 if(board[j][i] != playerPiece){
                     outcome = false;
-                } else { outcome = true; break;}
+                    break;
+                } else { outcome = true;}
             }
+            if(outcome = true) {break;}
         }
         return outcome;
     }
@@ -33,9 +35,8 @@ public class Board {
             for (int j = 0; j <= 2; j++) {
                 if (board[j][i] != playerPiece){
                     outcome = false;
-                } else { outcome = true;
                     break;
-                }
+                } else { outcome = true; break;}
             }
         }
         return outcome;
