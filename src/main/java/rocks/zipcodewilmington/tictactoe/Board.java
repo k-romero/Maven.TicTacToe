@@ -58,7 +58,7 @@ public class Board {
         }
         return outcome;
     }
-
+//    Diagonal (/)
     public boolean topRightBotLeftCheck(Character playerPiece){
         boolean outcome = false;
         int count = 0;
@@ -100,6 +100,11 @@ public class Board {
 
     public String getWinner() {
         String daWinner = "";
+        if(!isTie()){
+            if(isInFavorOfX()){
+                daWinner = "X";
+            } else daWinner = "O";
+        }
 
         return daWinner;
     }

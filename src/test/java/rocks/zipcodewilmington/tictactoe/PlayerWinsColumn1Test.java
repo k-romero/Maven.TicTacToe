@@ -23,8 +23,8 @@ public class PlayerWinsColumn1Test {
 
     @Test
     public void myTestforColsCheck() {
-        boolean expectedWinner = true;
-        boolean oWinnerActual = board.colsCheck('X');
+        boolean expectedWinner = false;
+        boolean oWinnerActual = board.colsCheck('O');
 
         // Then
         Assert.assertEquals(expectedWinner, oWinnerActual);

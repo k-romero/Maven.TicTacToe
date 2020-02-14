@@ -22,6 +22,15 @@ public class PlayerWinsDiagnol2Test {
     }
 
     @Test
+    public void myTestforTopRightBotLeftCheck() {
+        boolean expectedWinner = false;
+        boolean oWinnerActual = board.topRightBotLeftCheck('O');
+
+        // Then
+        Assert.assertEquals(expectedWinner, oWinnerActual);
+    }
+
+    @Test
     public void getWinnerTest() {
         // Given
         String expectedWinner = "X";
