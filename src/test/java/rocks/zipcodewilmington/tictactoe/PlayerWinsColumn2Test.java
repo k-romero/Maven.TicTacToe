@@ -22,6 +22,15 @@ public class PlayerWinsColumn2Test {
     }
 
     @Test
+    public void myTestforColsCheck() {
+        boolean expectedWinner = false;
+        boolean oWinnerActual = board.colsCheck('X');
+
+        // Then
+        Assert.assertEquals(expectedWinner, oWinnerActual);
+    }
+
+    @Test
     public void getWinnerTest() {
         // Given
         String expectedWinner = "O";

@@ -23,7 +23,7 @@ public class Board {
                     break;
                 } else { outcome = true;}
             }
-            if(outcome = true) {break;}
+            if(outcome == true) {break;}
         }
         return outcome;
     }
@@ -33,11 +33,12 @@ public class Board {
         boolean outcome = false;
         for (int i = 0; i <= 2 ; i++) {
             for (int j = 0; j <= 2; j++) {
-                if (board[j][i] != playerPiece){
+                if (board[i][j] != playerPiece){
                     outcome = false;
                     break;
-                } else { outcome = true; break;}
+                } else { outcome = true;}
             }
+            if(outcome == true){break;}
         }
         return outcome;
     }
