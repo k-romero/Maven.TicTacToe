@@ -33,7 +33,6 @@ public class Board {
             for (int j = 0; j <= 2; j++) {
                 if (board[j][i] != playerPiece){
                     outcome = false;
-                    break;
                 } else { outcome = true;
                     break;
                 }
